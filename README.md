@@ -19,7 +19,7 @@ Want to host your own private or community registry instead? See [HOSTING_YOUR_O
 Vido fetches the registry from:
 
 ```
-https://plugins.vido.app/registry/registry.json
+https://raw.githubusercontent.com/Copenblend/vido-plugin-registry/refs/heads/master/registry.json
 ```
 
 This URL is built into Vido as the official registry endpoint. Plugins from this URL receive the verified badge automatically.
