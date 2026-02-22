@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Vido Plugin Registry",
+  "description": "Schema for registry.json — the Vido plugin registry manifest.",
+  "type": "object",
+  "required": ["name", "plugins"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Human-readable name for this registry."
+    },
+    "plugins": {
+      "type": "array",
+      "description": "List of available plugins.",
+      "items": {
+        "$ref": "#/definitions/PluginEntry"
+      }
+    }
+  },
+  "definitions": {
+    "PluginEntry": {
+      "type": "object",
+      "required": ["id", "displayName", "description", "author", "version", "downloadUrl"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique plugin identifier (reverse-domain style, e.g. com.author.plugin-name). Must match the 'id' field in the plugin's plugin.json manifest.",
+          "pattern": "^[a-z0-9]+([.-][a-z0-9]+)*$"
+        },
+        "displayName": {
+          "type": "string",
+          "description": "User-facing display name shown in the Plugin Manager."
+        },
+        "description": {
+          "type": "string",
+          "description": "Short description (1-2 sentences) shown in search results."
+        },
+        "author": {
+          "type": "string",
+          "description": "Author or publisher name."
+        },
+        "version": {
+          "type": "string",
+          "description": "Current version available (semantic versioning, e.g. 1.0.0).",
+          "pattern": "^\\d+\\.\\d+\\.\\d+(-[a-zA-Z0-9.]+)?$"
+        },
+        "license": {
+          "type": "string",
+          "description": "SPDX license identifier (e.g. MIT, Apache-2.0, GPL-3.0)."
+        },
+        "tags": {
+          "type": "array",
+          "description": "Tags for discovery and categorization.",
+          "items": { "type": "string" }
+        },
+        "downloadUrl": {
+          "type": "string",
+          "format": "uri",
+          "description": "Direct URL to the plugin .zip archive. Must be a publicly accessible HTTPS URL (e.g. a GitHub release asset)."
+        },
+        "iconUrl": {
+          "type": ["string", "null"],
+          "format": "uri",
+          "description": "URL to a square plugin icon (PNG, 128x128 recommended). Optional."
+        },
+        "repository": {
+          "type": ["string", "null"],
+          "format": "uri",
+          "description": "URL to the plugin's source code repository. Optional."
+        },
+        "lastUpdated": {
+          "type": ["string", "null"],
+          "description": "ISO 8601 date of the last update (e.g. 2026-02-22). Optional.",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}"
+        }
+      }
+    }
+  }
+}
