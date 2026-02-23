@@ -1,18 +1,5 @@
 {
   "name": "Vido Official Plugin Registry",
   "plugins": [
-    {
-      "id": "com.vido.osr2-plus",
-      "displayName": "OSR2+",
-      "description": "OSR2+ stroker device control — syncs funscript files with video playback via TCode over Serial and UDP connections.",
-      "author": "Vido",
-      "version": "1.0.0",
-      "license": "MIT",
-      "tags": ["osr2", "tcode", "funscript", "stroker", "haptics"],
-      "downloadUrl": "https://github.com/YOUR_USERNAME/vido-osr-two-plus/releases/download/v1.0.0/vido-osr2-plus-1.0.0.zip",
-      "iconUrl": "https://raw.githubusercontent.com/YOUR_USERNAME/vido-osr-two-plus/main/Assets/OSR2-plus-plugin.png",
-      "repository": "https://github.com/YOUR_USERNAME/vido-osr-two-plus",
-      "lastUpdated": "2026-02-22"
-    }
   ]
 }
