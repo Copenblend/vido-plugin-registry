@@ -72,6 +72,40 @@
           "type": ["string", "null"],
           "description": "ISO 8601 date of the last update (e.g. 2026-02-22). Optional.",
           "pattern": "^\\d{4}-\\d{2}-\\d{2}"
+        },
+        "readmeUrl": {
+          "type": ["string", "null"],
+          "format": "uri",
+          "description": "URL to the plugin's README.md content (displayed in the Details tab of the Plugin Manager). Optional."
+        },
+        "changelogUrl": {
+          "type": ["string", "null"],
+          "format": "uri",
+          "description": "URL to the plugin's CHANGELOG.md content (displayed in the Changelog tab of the Plugin Manager). Optional."
+        },
+        "dependencies": {
+          "type": "array",
+          "description": "Plugins that must be installed before this plugin. The Plugin Manager will auto-install these from the registry.",
+          "items": {
+            "$ref": "#/definitions/PluginDependency"
+          }
+        }
+      }
+    },
+    "PluginDependency": {
+      "type": "object",
+      "required": ["id", "minVersion"],
+      "description": "A dependency on another plugin with a minimum version requirement.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Plugin ID of the required dependency (e.g. com.vido.osr2-plus).",
+          "pattern": "^[a-z0-9]+([.-][a-z0-9]+)*$"
+        },
+        "minVersion": {
+          "type": "string",
+          "description": "Minimum required version (inclusive). The installed plugin's version must be >= this value.",
+          "pattern": "^\\d+\\.\\d+\\.\\d+(-[a-zA-Z0-9.]+)?$"
         }
       }
     }
