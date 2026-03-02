@@ -6,15 +6,15 @@
       "displayName": "Playlists",
       "description": "Create, manage, and play video playlists with shuffle, loop, drag-and-drop reordering, and auto-save support.",
       "author": "Vido",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "license": "MIT",
       "tags": ["playlist", "queue", "playback"],
-      "downloadUrl": "https://github.com/Copenblend/vido-playlists/releases/download/v1.0.0/vido-playlists-1.0.0.zip",
+      "downloadUrl": "https://github.com/Copenblend/vido-playlists/releases/download/v2.0.0/vido-playlists-2.0.0.zip",
       "iconUrl": "https://raw.githubusercontent.com/Copenblend/vido-playlists/refs/heads/master/Assets/Playlist-plugin.png",
       "readmeUrl": "https://raw.githubusercontent.com/Copenblend/vido-playlists/refs/heads/master/README.md",
       "changelogUrl": "https://raw.githubusercontent.com/Copenblend/vido-playlists/refs/heads/master/CHANGELOG.md",
       "repository": "https://github.com/Copenblend/vido-playlists",
-      "lastUpdated": "2026-02-24T00:00:00Z"
+      "lastUpdated": "2026-03-01T00:00:00Z"
     }
   ]
 }
